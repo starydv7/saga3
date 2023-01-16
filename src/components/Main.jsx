@@ -1,8 +1,6 @@
-import "../App.css";
-
-import { addToCart } from "../redux/action";
+import { addToCart, emptyCart, removeToCart } from "../redux/action";
 import { useDispatch } from "react-redux";
-
+import { styles } from "./home.module.css";
 function Main() {
   const dispatch = useDispatch();
   const product = {
@@ -14,6 +12,14 @@ function Main() {
   return (
     <div>
       <button onClick={() => dispatch(addToCart(product))}>Add To Cart</button>
+      <div>
+        <button onClick={() => dispatch(removeToCart(product.name))}>
+          Remove from Cart
+        </button>
+      </div>
+      <div>
+        <button onClick={() => dispatch(emptyCart())}>Empty Cart</button>
+      </div>
     </div>
   );
 }
