@@ -17,7 +17,7 @@ export const removeToCart = (data) => {
 }
 
 export const emptyCart = () => {
-    console.warn("action emptyCart",)
+    console.log("action emptyCart",)
     return {
         type: EMPTY_CART,
     }
