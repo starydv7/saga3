@@ -8,7 +8,7 @@
 }
 /* header style */
 .header{
-  background-color: orange;
+  background-color: rgb(90, 76, 149);
   height: 100px;
 }
 .cart{
@@ -20,14 +20,16 @@
   width: 30px;
 }
 .cart span{
-  background-color: green;
+  background-color: rgb(203, 229, 11);
   border-radius: 100%;
   height: 20px;
   width: 20px;
   position:absolute;
   top:-10px;
   right:0px;
-  color: #fff;
+  color: rgb(251, 9, 9);
+  font-size: 20px;
+  font-weight: 600;
 }
 
 /* end header style */
