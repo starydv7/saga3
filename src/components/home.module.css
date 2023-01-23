@@ -1,3 +1,6 @@
+*{
+  background: linear-gradient(to right ,rgb(243, 243, 99),rgb(219, 102, 102));
+}
 .App {
   text-align: center;
 }
@@ -30,6 +33,19 @@
   color: rgb(251, 9, 9);
   font-size: 20px;
   font-weight: 600;
+}
+.productcontainer{
+  display: grid;
+  flex-wrap:wrap;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  border-radius: 2px solid green;
+  border: 2px solid red;
+}
+.productitem{
+  border: 2px solid grey;
+  border-radius: 20px;
 }
 
 /* end header style */
