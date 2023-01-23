@@ -9,6 +9,7 @@ function Main() {
   const dispatch = useDispatch();
   let data = useSelector((state) => state.productData);
   console.warn("data in main component", data);
+  console.log("data", data);
 
   useEffect(() => {
     dispatch(productList());
