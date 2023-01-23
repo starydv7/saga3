@@ -10,7 +10,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 console.warn(store)
 root.render(
   <Provider store={store} >
-   <BrowserRouter> <App /></BrowserRouter>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>
 );
 
