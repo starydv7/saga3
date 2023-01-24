@@ -6,37 +6,36 @@ const Cart = () => {
     console.log(cartData);
     let amount = cartData.length && cartData.map(item=>item.price).reduce((prev, next)=>prev+next)
 console.warn(amount)
-    return (<div>
-        <Link to="/" >Go to Products Link</Link>
+    return (
+     <div>
+      <Link to="/" >Go to Products Link</Link>
         <h1>Cart Page</h1>
-        <div className="cart-page-container">
-            <table>
-                <tr>
-                    <td>Title</td>
-                    <td>Price</td>
-                    <td>Price</td>
-                    <td>Brand</td>
-                    <td>Category</td>
-                </tr>
-                {
-                    cartData.map((item) => <tr key={item.id}>
-                        
-                        <td>{item.name}</td>
-                        <td>{item.price}</td>
-                        <td>{item.description}</td>
-                        <td>{item.category}</td>
-                    </tr>)
-                }
-            </table>
-            <div className="price-details">
+      <div className="cart-page-container">
+        {cartData.map((item) => (
+          <div>
+            <div>TITLE : {item.title}</div>
+            <div>PRICE : {item.price}</div>
+            <div>
+              {" "}
+              <img src={item.image} alt="" />{" "}
+            </div>
+            <div>Price : {item.description} </div>
+            <div>Category : {item.id} </div>
+
+          
+            </div>
+            
+        ))}
+            </div>
+              <div className="price-details">
                 <div className="adjust-price"><span>Amount</span><span>{amount}</span></div>
                 <div className="adjust-price"><span>Discount</span><span>{amount/10}</span></div>
                 <div className="adjust-price"><span>Tax</span><span>000</span></div>
                 <div className="adjust-price"><span>Total</span><span>{amount-(amount/10)}</span></div>
 
             </div>
-        </div>
-    </div>)
+    </div>
+    )
 }
 
 export default Cart;
