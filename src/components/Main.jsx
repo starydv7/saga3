@@ -8,7 +8,7 @@ import styles from "./home.module.css";
 function Main() {
   const dispatch = useDispatch();
   let data = useSelector((state) => state.productData);
-  console.warn("data in main component", data);
+  console.log("data in main component", data);
   console.log("data", data);
 
   useEffect(() => {
