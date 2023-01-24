@@ -22,13 +22,13 @@ function Main() {
       <div className={styles.productcontainer}>
         {data.map((item) => (
           <div className={styles.productitem}>
-            <img src={item.thumbnailUrl} alt="" />
-            <div>Name : {item.albumId}</div>
+            <div>TITLE : {item.title}</div>
+            <div>PRICE : {item.price}</div>
             <div>
               {" "}
-              <img src={item.url} alt="" />{" "}
+              <img src={item.image} alt="" />{" "}
             </div>
-            <div>Price : {item.title} </div>
+            <div>Price : {item.description} </div>
             <div>Category : {item.id} </div>
 
             <div>

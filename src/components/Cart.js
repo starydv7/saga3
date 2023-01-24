@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
     const cartData = useSelector((state) => state.cartData);
+    console.log(cartData);
     let amount = cartData.length && cartData.map(item=>item.price).reduce((prev, next)=>prev+next)
 console.warn(amount)
     return (<div>
@@ -11,18 +12,18 @@ console.warn(amount)
         <div className="cart-page-container">
             <table>
                 <tr>
-                    <td>Name</td>
-                    <td>Color</td>
+                    <td>Title</td>
+                    <td>Price</td>
                     <td>Price</td>
                     <td>Brand</td>
                     <td>Category</td>
                 </tr>
                 {
-                    cartData.map((item) => <tr key={item.key}>
+                    cartData.map((item) => <tr key={item.id}>
+                        
                         <td>{item.name}</td>
-                        <td>{item.color}</td>
                         <td>{item.price}</td>
-                        <td>{item.brand}</td>
+                        <td>{item.description}</td>
                         <td>{item.category}</td>
                     </tr>)
                 }
