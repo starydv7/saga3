@@ -23,13 +23,13 @@ function Main() {
         {data.map((item) => (
           <div className={styles.productitem}>
             <div>TITLE : {item.title}</div>
-            <div>PRICE : {item.price}</div>
+            <div>CATEGORY: {item.images.category}</div>
             <div>
               {" "}
-              <img src={item.image} alt="" />{" "}
+              <img src={item.images} alt="" />{" "}
             </div>
-            <div>Price : {item.description} </div>
-            <div>Category : {item.id} </div>
+            <div>Price : {item.price} </div>
+            
 
             <div>
               <button onClick={() => dispatch(addToCart(item))}>

@@ -98,6 +98,29 @@
 .App-link {
   color: #61dafb;
 }
+.cart-page-container{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  border: 2px solid green;
+  background: linear-gradient(to right ,white,grey,green);
+}
+.cart-div{
+  background:linear-gradient(to left white ,black,green,teal);
+}
+
+
+.back{
+  background: linear-gradient(to left,black,blue,green,yellow);
+  color: white;
+  font-weight: 800;
+  border-radius: 10px;
+}
+.price-details{
+  border: 2px solid red;
+  margin-top: 30px;
+}
 
 @keyframes App-logo-spin {
   from {
